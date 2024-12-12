@@ -1,0 +1,75 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Input Form</title>
+    <style>
+        body {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        h1, h2 {
+            color: #c4a414;
+        }
+        form {
+            background-color: #34495e;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: none;
+            border-radius: 4px;
+        }
+        input[type="submit"] {
+            background-color: #c4a414;
+            color: #ecf0f1;
+            border: none;
+            padding: 10px 20px;
+            margin-top: 20px;
+            cursor: pointer;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        input[type="submit"]:hover {
+            background-color: #c4a414;
+        }
+    </style>
+</head>
+<body>
+    <form action="/submit" method="post">
+        <h1>Mason's Regev Encryption</h1>
+        <h2>Key Generation</h2>
+        <label for="security-parameter">Security Parameter:</label>
+        <input type="text" id="security-parameter" name="Security Parameter"><br>
+        <h2>Encrypt</h2>
+        <label for="public-key">Public Key:</label>
+        <input type="text" id="public-key" name="Public Key"><br>
+        <label for="message-input">Input Message:</label>
+        <input type="text" id="message-input" name="Message Input"><br>
+        <h2>Decrypt</h2>
+        <label for="secret-key">Secret Key:</label>
+        <input type="text" id="secret-key" name="Secret Key"><br>
+        <label for="ciphertext-input">Input Ciphertext:</label>
+        <input type="text" id="ciphertext-input" name="Ciphertext Input"><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
+

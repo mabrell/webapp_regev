@@ -1,0 +1,119 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Results</title>
+    <style>
+        body {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+            margin: 0;
+            flex-direction: column;
+        }
+        h1 {
+            color: #c4a414;
+            margin: 20px 0;
+        }
+        div {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: none;
+            border-radius: 4px;
+            resize: none;
+            height: 100px;
+            background-color: #34495e;
+            color: #ecf0f1;
+        }
+        button {
+            background-color: #c4a414;
+            color: #ecf0f1;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #c4a414;
+        }
+    </style>
+</head>
+<body>
+    <h1>Generated Keys</h1>
+    <div>
+        <label for="outputpk">New Public Key:</label>
+        <textarea id="outputpk" rows="4" cols="50">{{ new_public_key }}</textarea>
+    </div>
+    <button id="copyButtonpk">Copy Public Key to Clipboard</button>
+
+    <div>
+        <label for="outputsk">New Secret Key:</label>
+        <textarea id="outputsk" rows="4" cols="50">{{ new_secret_key }}</textarea>
+    </div>
+    <button id="copyButtonsk">Copy Secret Key to Clipboard</button>
+
+    <h1>Ciphertext</h1>
+    <div>
+        <label for="output1">Ciphertext:</label>
+        <textarea id="output1" rows="4" cols="50">{{ ciphertext }}</textarea>
+    </div>
+    <button id="copyButton1">Copy Ciphertext to Clipboard</button>
+
+    <h1>Plaintext</h1>
+    <div>
+        <label for="output2">Plaintext:</label>
+        <textarea id="output2" rows="4" cols="50">{{ plaintext }}</textarea>
+    </div>
+    <button id="copyButton2">Copy Plaintext to Clipboard</button>
+
+    <script>
+        document.getElementById('copyButtonpk').addEventListener('click', function() {
+            var copyText = document.getElementById('outputpk');
+            copyText.select();
+            document.execCommand('copy');
+            alert('Copied to clipboard!');
+        });
+
+        document.getElementById('copyButtonsk').addEventListener('click', function() {
+            var copyText = document.getElementById('outputsk');
+            copyText.select();
+            document.execCommand('copy');
+            alert('Copied to clipboard!');
+        });
+
+        document.getElementById('copyButton1').addEventListener('click', function() {
+            var copyText = document.getElementById('output1');
+            copyText.select();
+            document.execCommand('copy');
+            alert('Copied to clipboard!');
+        });
+
+        document.getElementById('copyButton2').addEventListener('click', function() {
+            var copyText = document.getElementById('output2');
+            copyText.select();
+            document.execCommand('copy');
+            alert('Copied to clipboard!');
+        });
+    </script>
+</body>
+</html>
+
